@@ -80,7 +80,7 @@ body {
     padding-left:200px;
     padding-right: 200px;
     padding-top: 30px;
-    padding-bottom: 500px;
+    padding-bottom: 50px;
     
 }
 .square{
@@ -101,3 +101,63 @@ body {
     gap: 15px;
     
 }
+.three {
+    background-color:#e5e7eb;
+    padding: 50px 350px 50px 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    gap: 12px;  
+
+}
+
+.testimonial {
+    color: #1F2937;
+    flex-grow: 1;
+    font-size: 24px;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.thor {
+    font-weight: 900;
+    font-size: 18px;
+}
+.four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+    
+}
+.cta {
+    background-color:#3882f6 ;
+    display: flex;
+    justify-content:space-between;
+    align-self: center;
+    align-items: center;
+    padding: 50px 80px;
+    gap: 320px;
+    border-radius: 3px;
+
+}
+.leftfour {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.textfour {
+    font-size: 24px;    
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1F2937;
+    color: #e5e7eb;
+    padding: 24px 0;
+}
+
+
