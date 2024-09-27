@@ -1,4 +1,18 @@
-let humanChoice,humanScore = 0,compChoice,compScore = 0;
+
+let humanChoice,humanScore = 0,compChoice,compScore = 0,draw = 0;
+
+function playGame() {
+    
+   
+    playRound(humanChoice,compChoice)
+    playRound(humanChoice,compChoice)
+    playRound(humanChoice,compChoice)
+    playRound(humanChoice,compChoice)
+    playRound(humanChoice,compChoice)
+    displayScore(humanScore,compScore,draw)
+}
+
+playGame()
 
 function getCompChoice (){
     let rand = Math.random();
@@ -28,15 +42,17 @@ function getHumanChoice () {
     }
 
 }
-getCompChoice()
-getHumanChoice()
+
 
 
 function playRound(humanChoice,compChoice)
-    {
+{
+    getCompChoice()
+    getHumanChoice()
         if (humanChoice == 'rock'){
             if (compChoice == 'rock') {
                 console.log('Match Draw');
+                draw = draw + 1;
                 }
             if (compChoice == 'paper') {
                 console.log('Paper beats Rock you lose');
@@ -52,6 +68,8 @@ function playRound(humanChoice,compChoice)
         if (humanChoice == 'paper') {
             if (compChoice == 'paper') {
                 console.log('Match Draw');
+                draw = draw + 1;
+
                 }
             if (compChoice == 'rock') {
                 console.log('Paper beats Rock you win');
@@ -67,6 +85,8 @@ function playRound(humanChoice,compChoice)
         if (humanChoice == 'scissors') {
             if (compChoice == 'rock') {
                 console.log('Match Draw');
+                draw = draw + 1;
+
                 }
             if (compChoice == 'paper') {
                 console.log('Paper beats Scissors you win');
@@ -78,18 +98,32 @@ function playRound(humanChoice,compChoice)
             }
 
         }
+}  
 
-    }   
-
-
-
-
-
-
-
-
-
-
+function displayScore (a,b,c) {
+    console.log('Human score '+a);
+    console.log('computer score '+b);
+    console.log('Draw '+c);
     
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
