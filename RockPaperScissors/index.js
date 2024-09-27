@@ -1,4 +1,4 @@
-let humanChoice,humanScore,compChoice,computerScore;
+let humanChoice,humanScore = 0,compChoice,compScore = 0;
 
 function getCompChoice (){
     let rand = Math.random();
@@ -32,14 +32,64 @@ getCompChoice()
 getHumanChoice()
 
 
-if (compChoice == humanChoice) {
-    console.log('match draw')
-}
-else {
-    console.log('computer choice ' +compChoice)
-    console.log('human choice ' +humanChoice);
-    
-}
+function playRound(humanChoice,compChoice)
+    {
+        if (humanChoice == 'rock'){
+            if (compChoice == 'rock') {
+                console.log('Match Draw');
+                }
+            if (compChoice == 'paper') {
+                console.log('Paper beats Rock you lose');
+                compScore = compScore + 1;
+            }
+            if (compChoice == 'scissors') {
+                console.log('Rock beats Scissors you win')
+                humanScore = humanScore +1;
 
+            }
+
+        }
+        if (humanChoice == 'paper') {
+            if (compChoice == 'paper') {
+                console.log('Match Draw');
+                }
+            if (compChoice == 'rock') {
+                console.log('Paper beats Rock you win');
+                humanScore = humanScore +1;
+
+            }
+            if (compChoice == 'scissors') {
+                console.log('Scissors beats paper you lose')
+                compScore = compScore + 1;
+            }
+
+        }
+        if (humanChoice == 'scissors') {
+            if (compChoice == 'rock') {
+                console.log('Match Draw');
+                }
+            if (compChoice == 'paper') {
+                console.log('Paper beats Scissors you win');
+                humanScore = humanScore +1;
+            }
+            if (compChoice == 'rock') {
+                console.log('Rock beats Scissors you lose')
+                compScore = compScore + 1;
+            }
+
+        }
+
+    }   
+
+
+
+
+
+
+
+
+
+
+    
 
 
