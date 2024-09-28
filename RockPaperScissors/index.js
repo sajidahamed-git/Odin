@@ -10,7 +10,9 @@ for (let i = 0; i < 5; i++) {
 displayScore(humanScore,compScore,draw)
 
 function playRound(a,b) // a is human choice b is comp choice
-{
+{       
+    // console.log('playround running');
+
         if (a == 'rock'){
             if (b == 'rock') {
                 console.log('Match Draw');
@@ -45,7 +47,7 @@ function playRound(a,b) // a is human choice b is comp choice
                 draw = draw + 1;
                 }
             if (b == 'paper') {
-                console.log('Paper beats Scissors you win');
+                console.log('Scissors beats Paper you win');
                 humanScore = humanScore +1;
             }
             if (b == 'rock') {
