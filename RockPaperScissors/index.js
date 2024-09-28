@@ -68,15 +68,15 @@ function getCompChoice (){
     let rand = Math.random();
     if (rand > 0 && rand < 0.33){
         compChoice = 'rock'
-        console.log('comp choice '+compChoice);
+        // console.log('comp choice '+compChoice);
     }
     else if (rand > 0.33 && rand < 0.77) {
         compChoice = 'paper'
-         console.log('comp choice '+compChoice);
+        // console.log('comp choice '+compChoice);
     }
     else {
         compChoice = 'scissors'
-         console.log('comp choice '+compChoice);
+        // console.log('comp choice '+compChoice);
     }
 }
 
@@ -84,11 +84,11 @@ function getHumanChoice () {
     temp = prompt('enter your Move');
     if (temp == 'rock' || temp == 'paper' || temp == 'scissors' ){
         humanChoice = temp;
-        console.log('human choice ' + humanChoice );
+        // console.log('human choice ' + humanChoice );
                         
     }
     else {
-        console.log('enter allowed value in lower case')
+        // console.log('enter allowed value in lower case')
     }
 }
 
