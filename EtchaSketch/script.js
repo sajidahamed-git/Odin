@@ -16,7 +16,7 @@ function generatecontainerhtml() {
     const boxes = document.querySelectorAll(".boxes");
 
     boxes.forEach((box) => {
-      box.style.width = `${boxsizewidth}px`;
+      box.style.width = `calc((100% / ${rows})`;
       box.style.height = `${boxsizeheight}px`;
     });
 
