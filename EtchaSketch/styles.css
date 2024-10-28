@@ -1,0 +1,11 @@
+.box {
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+}
+
+.grid {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+}
