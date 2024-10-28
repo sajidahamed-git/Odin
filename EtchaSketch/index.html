@@ -6,8 +6,22 @@
     <title>Etch a Sketch</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <div class="grid"></div>
+    <div class="temt">
+      Enter the number of squares per side
+      
+      <input
+      value="10"
+      type="number"
+      class="input"
+      onkeydown="if (event.key === 'Enter') {generatecontainerhtml()}"
+      />
+      
+      <button class="button" onclick="generatecontainerhtml()">Submit</button>
+    </div>
+    <div class="container"></div>
+
     <script src="script.js"></script>
   </body>
 </html>

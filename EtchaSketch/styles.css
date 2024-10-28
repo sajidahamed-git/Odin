@@ -1,11 +1,27 @@
-.box {
-  height: 30px;
-  width: 30px;
-  border: 1px solid black;
+.boxes{
+  min-height: 5px;
+  min-width: 5px;
+  border: 1px solid grey;
+  box-sizing: border-box; /* Prevents padding/border from affecting width */
+  margin: 0;
+  padding: 0;
+  
 }
 
-.grid {
+.container {
   display: flex;
-  margin: auto;
   flex-wrap: wrap;
+  max-width: 1500px;
+  max-height: 600px;
+  border: 0.1px solid rgb(255, 104, 87);
+  margin: auto;
+  padding: 0;
+}
+
+.temt {
+  text-align: center;
+}
+
+.boxes:hover{
+  background-color: bisque;
 }
