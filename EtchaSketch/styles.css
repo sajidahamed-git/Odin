@@ -1,10 +1,12 @@
+body{background-color: grey;}
 .boxes{
   min-height: 5px;
   min-width: 5px;
-  border: 1px solid grey;
+  border: 1px solid black;
   box-sizing: border-box; /* Prevents padding/border from affecting width */
   margin: 0;
   padding: 0;
+  
   
 }
 
@@ -23,8 +25,8 @@
 }
 
 .boxes:hover{
-  background-color: bisque;
+  background-color: black;
 }
 .boxes.active {
-  background-color: bisque; /* Permanent color after hover */
+  background-color: black; /* Permanent color after hover */
 }
