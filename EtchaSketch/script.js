@@ -10,14 +10,13 @@ function generatecontainerhtml() {
       containerHTML += oneboxHTML;
     }
     container.innerHTML = containerHTML;
-    const boxsizewidth = 1500 / rows; // depends upon max width of the container
-    const boxsizeheight = 600 / rows;
+    
 
     const boxes = document.querySelectorAll(".boxes");
 
     boxes.forEach((box) => {
       box.style.width = `calc((100% / ${rows})`;
-      box.style.height = `${boxsizeheight}px`;
+      box.style.height = `calc((100% / ${rows})`;
     });
 
     boxes.forEach((box) => {
