@@ -1,7 +1,7 @@
 function generatecontainerhtml() {
   const container = document.querySelector(".container");
   const rows = Number(document.querySelector(".input").value);
-console.log(typeof(rows));
+  console.log(typeof rows);
   if (rows <= 100 && Number.isInteger(rows)) {
     console.log(rows);
     const oneboxHTML = '<div class="boxes"></div>';
@@ -19,8 +19,13 @@ console.log(typeof(rows));
       box.style.width = `${boxsizewidth}px`;
       box.style.height = `${boxsizeheight}px`;
     });
-  } else document.querySelector(".container").innerHTML = "enter a integer number below 100";
 
-
-  
+    boxes.forEach((box) => {
+      box.addEventListener("mouseenter", () => {
+        box.classList.add("active");
+      });
+    });
+  } else
+    document.querySelector(".container").innerHTML =
+      "enter a integer number below 100";
 }

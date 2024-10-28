@@ -25,3 +25,6 @@
 .boxes:hover{
   background-color: bisque;
 }
+.boxes.active {
+  background-color: bisque; /* Permanent color after hover */
+}
