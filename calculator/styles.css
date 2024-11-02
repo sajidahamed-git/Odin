@@ -1,0 +1,43 @@
+body, html {
+    overflow: hidden; /* Disables both horizontal and vertical scrolling */
+  }
+  
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.heading {
+  font-size: 2rem;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.outerbox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(228, 199, 147);
+  width: 25%;
+  background-color: black;
+  border-radius: 5px;
+}
+.display {
+  margin: 10px;
+  height: 80px;
+  border: 1px solid blue;
+}
+.row {
+  margin: 10px;
+  display: flex;
+  flex-grow: 1;
+  gap: 20px;
+  /* border: 1px solid orange; */
+}
+.button {
+  flex: 1;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
