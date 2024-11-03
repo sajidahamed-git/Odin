@@ -32,14 +32,24 @@ body {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  gap: 10px;
 }
-.input{
+.input {
   color: white;
   font-size: 2.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
 }
-.result{
+.result {
   color: white;
   font-size: 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
 }
 .row {
   margin: 10px;
