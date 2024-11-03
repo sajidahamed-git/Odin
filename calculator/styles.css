@@ -42,6 +42,8 @@ body {
   justify-content: end;
   align-items: center;
   padding-right: 10px;
+  min-height: 40px;
+  /* border: 1px white solid; */
 }
 .result {
   color: white;
@@ -50,6 +52,9 @@ body {
   justify-content: end;
   align-items: center;
   padding-right: 10px;
+  min-height: 30px;
+  /* border: 1px white solid; */
+
 }
 .row {
   margin: 10px;
@@ -69,4 +74,8 @@ body {
 
 .equal {
   background-color: #ff8c00;
+}
+
+.multiply, .minus, .plus, .divide{
+  font-size: 3rem;
 }
