@@ -79,3 +79,14 @@ body {
 .multiply, .minus, .plus, .divide{
   font-size: 3rem;
 }
+
+.cancel-button, .backspace{ 
+  /* buttons which should not be added in display when clicked */
+  flex: 1;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-size: 2em;
+  /* color: white; */
+  background-color: #9e9e9e;
+
+}
