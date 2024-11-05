@@ -7,18 +7,8 @@ const result = document.querySelector(".result");
 let inputText = "";
 
 allbuttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    if (button.innerHTML === "=") {
-      calculate(inputText);
-      return;
-    }
-    inputText = inputText + button.innerHTML;
-    if (inputText.length > 10) {
-      result.innerHTML = "max digits";
-      return;
-    }
-    input.textContent = inputText;
-  });
+  renderInput(button)
+
 });
 
 backspace.addEventListener("click", () => {
@@ -71,3 +61,19 @@ function calculate(expression) {
   result.innerHTML = answer;
 }
 
+function renderInput(button){
+  button.addEventListener("click", () => {
+    if (button.innerHTML === "=") {
+      calculate(inputText);
+      return;
+    }
+    inputText = inputText + button.innerHTML;
+    if (inputText.length > 10) {
+      result.innerHTML = "max digits";
+      return;
+    }
+    input.textContent = inputText;
+  });
+
+
+}
