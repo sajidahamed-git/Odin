@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   border: 5px solid #2a2a2a;
-  width: 25%;
+  min-width: 25%;
   background-color: black;
   border-radius: 10px;
 }
