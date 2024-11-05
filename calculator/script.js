@@ -39,7 +39,14 @@ equal.addEventListener("click", () => {
     }
 
     if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "/", "*", "-", "+"].includes(event.key)){
+      if (inputString.length > 10) {
+        result.textContent = "max limit";
+        return;
+      }
+
+
       inputString += event.key;
+
       inputfield.textContent = inputString;
       
     }
