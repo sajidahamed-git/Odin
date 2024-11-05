@@ -1,39 +1,49 @@
-//todo add error handling when expression is passed empty
 export function calculate(expression) {
-    // Match numbers and operators
-    const tokens = expression.match(/(\d+|\+|\-|\*|\/)/g);
+  const res = document.querySelector('.result');
   
-    // Check if tokenization was successful
-    if (!tokens) {
-      throw new Error("Invalid expression");
-    }
+  // Check if the expression is empty
+  if (!expression.trim()) {
+      res.textContent = "Please enter a valid expression";
+      return "Invalid input";
+  }
   
-    // Parse the first number
-    let answer = parseFloat(tokens[0]);
+  // Match numbers (including decimals) and operators
+  const tokens = expression.match(/(\d+(\.\d+)?|\+|\-|\*|\/)/g);
   
-    // Iterate over the operators and the following numbers
-    for (let i = 1; i < tokens.length; i += 2) {
+  // Check if tokenization was successful
+  if (!tokens) {
+      res.textContent = "Invalid expression";
+      return "Invalid input";
+  }
+
+  // Parse the first number
+  let answer = parseFloat(tokens[0]);
+
+  // Iterate over the operators and the following numbers
+  for (let i = 1; i < tokens.length; i += 2) {
       const operator = tokens[i];
       const nextNumber = parseFloat(tokens[i + 1]);
-  
+
       // Perform the calculation based on the operator
       switch (operator) {
-        case "+":
-          answer += nextNumber;
-          break;
-        case "-":
-          answer -= nextNumber;
-          break;
-        case "*":
-          answer *= nextNumber;
-          break;
-        case "/":
-          answer /= nextNumber;
-          break;
-        default:
-          throw new Error("Invalid operator");
+          case "+":
+              answer += nextNumber;
+              break;
+          case "-":
+              answer -= nextNumber;
+              break;
+          case "*":
+              answer *= nextNumber;
+              break;
+          case "/":
+              answer /= nextNumber;
+              break;
+          default:
+              res.textContent = "Invalid operator";
+              return "Invalid input";
       }
-    }
-  
-      return answer
   }
+
+  return answer;
+}
+ 

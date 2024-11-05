@@ -1,67 +1,58 @@
 import { calculate } from "./calculate.js";
 
-const input = document.querySelector(".input");
-const allbuttons = document.querySelectorAll(".button");
-const backspace = document.querySelector(".backspace");
+const keys = document.querySelectorAll(".button");
+const inputfield = document.querySelector(".input");
+
+let inputString = "";
+keys.forEach((key) => {
+  key.addEventListener("click", () => {
+    if (inputString.length > 10) {
+      result.textContent = "max limit";
+      return;
+    }
+    inputString += key.textContent;
+    inputfield.textContent = inputString;
+  });
+});
+
 const cancel = document.querySelectorAll(".cancel-button");
+
+cancel.forEach((key) => {
+  key.addEventListener("click", () => {
+    inputString = "";
+    inputfield.textContent = "";
+    result.textContent = "";
+  });
+});
+
+const equal = document.querySelector(".equal");
 const result = document.querySelector(".result");
-
-let inputText = "";
-
-allbuttons.forEach((button) => {
-  renderInput(button);
+//for equal key
+equal.addEventListener("click", () => {
+  result.textContent = calculate(inputString);
 });
-
-backspace.addEventListener("click", () => {
-  inputText = inputText.slice(0, -1);
-  input.textContent = inputText;
-});
-
-cancel.forEach((button) => {
-  button.addEventListener("click", () => {
-    inputText = "";
-    input.textContent = inputText;
-    result.innerHTML = "";
-  });
-});
-
-function renderInput(button) {
-  button.addEventListener("click", () => {
-    if (button.innerHTML === "=") {
-      result.innerHTML = calculate(inputText);
-      return;
+//for enter key
+  document.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      result.textContent = calculate(inputString);
     }
-    inputText = inputText + button.innerHTML;
-    if (inputText.length > 10) {
-      result.innerHTML = "max digits";
-      return;
-    }
-    input.textContent = inputText;
-  });
-}
 
-document.addEventListener("keypress", (event) => {
-  //console.log(event.key);
-  if (
-    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "/", "*", "-", "+"].includes(
-      event.key
-    )
-  ) {
-    inputText = inputText + event.key;
-    input.textContent = inputText;
+    if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "/", "*", "-", "+"].includes(event.key)){
+      inputString += event.key;
+      inputfield.textContent = inputString;
+      
+    }
+  });
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    inputString = "";
+    inputfield.textContent = "";
+    result.textContent = "";
+    console.log(event);
+    
   }
 
-  if (event.key === "Enter") {
-    if (inputText.length === 0) {
-      result.textContent = "enter numbers";
-      return;
-    } else {
-      console.log(inputText);
-      const some = calculate(inputText);
-      console.log(some);
-      result.textContent = some;
-      inputText = "";
-
-    }
-  }
+  else console.log(event);
 });

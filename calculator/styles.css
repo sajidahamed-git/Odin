@@ -63,7 +63,7 @@ body {
   gap: 20px;
   /* border: 1px solid orange; */
 }
-.button {
+.button, .equal  {
   flex: 1;
   aspect-ratio: 1/1;
   border-radius: 50%;
