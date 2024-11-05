@@ -42,15 +42,26 @@ function renderInput(button) {
 
 document.addEventListener("keypress", (event) => {
   //console.log(event.key);
-  if (['1','2','3','4','5','6','7','8','9','/','*','-','+'].includes(event.key))
-    {
+  if (
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "/", "*", "-", "+"].includes(
+      event.key
+    )
+  ) {
     inputText = inputText + event.key;
     input.textContent = inputText;
   }
-  if (event.key === 'Enter') {
-    result.innerHTML = calculate(inputText);
-    
-  } 
-  
-  else console.log("enter number");
+
+  if (event.key === "Enter") {
+    if (inputText.length === 0) {
+      result.textContent = "enter numbers";
+      return;
+    } else {
+      console.log(inputText);
+      const some = calculate(inputText);
+      console.log(some);
+      result.textContent = some;
+      inputText = "";
+
+    }
+  }
 });
