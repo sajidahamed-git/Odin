@@ -1,4 +1,4 @@
-
+//todo add error handling when expression is passed empty
 export function calculate(expression) {
     // Match numbers and operators
     const tokens = expression.match(/(\d+|\+|\-|\*|\/)/g);
