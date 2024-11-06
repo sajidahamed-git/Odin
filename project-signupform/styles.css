@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    border: 1px solid red;
+    height: 100vh;
+    
+}
+
+.main{
+    display: flex;
+    height: 100%;
+    
+    
+}
+
+.photo{
+    
+    border: 1px solid white;
+    flex: 1;
+
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.form{
+
+    flex: 2;
+    border: 1px solid white;
+}
