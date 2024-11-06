@@ -42,7 +42,7 @@ body {
 
 .right {
   flex: 2;
-  border: 1px solid orange;
+
   color: white;
   display: flex;
   flex-direction: column;
@@ -53,11 +53,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  
-  border: 1px solid pink;
-flex: 1;
+  justify-content: center;
+
+  flex: 2;
+  gap: 20px;
+}
+.welcome-message {
+  font-size: 2.5rem;
+}
+.subtext {
+  font-size: 1.25rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  /* border: 1px solid magenta; */
+}
+.signup {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  font-size: 1.25rem;
+  /* border: 1px solid magenta; */
 }
 
-.form{flex: 1;}
-.action{flex: 1;}
+.form {
+  border: 1px solid magenta;
+  flex: 2;
+}
+.action {
+  flex: 1;
+}
