@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: white;
   height: 100vh;
 }
 
@@ -54,7 +54,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  color: black;
   flex: 2;
   gap: 20px;
 }
@@ -68,16 +68,55 @@ body {
   /* border: 1px solid magenta; */
 }
 .signup {
-  margin-left: 2.5rem;
+  margin-left: 2.5rem;  
   margin-right: 2.5rem;
   font-size: 1.25rem;
   /* border: 1px solid magenta; */
 }
 
-.form {
+.right-second {
   border: 1px solid magenta;
   flex: 2;
+  color: black;
 }
+
+.form{
+  margin-left: 5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .action {
   flex: 1;
 }
