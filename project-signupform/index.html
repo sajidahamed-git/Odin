@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up form</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="main">
@@ -17,8 +16,8 @@
         />
 
         <div class="odin-container">
-                <img class="odin" src="./assets/odin-lined.png" alt="">
-                <span class="odin-text" >Dream Catcher</span>
+          <img class="odin" src="./assets/odin-lined.png" alt="" />
+          <span class="odin-text">Dream Catcher</span>
         </div>
       </div>
       <div class="right">
@@ -40,14 +39,39 @@
           </div>
         </div>
         <div class="right-second">
-          <form class="form" action="post">
-            <label for="">name</label>
+          <h2 >Lets do this</h2>
+          <form action="" >
             <div>
-              <input type="text" />
+              <label for="fname" >First name</label>
+              <input type="text" id="fname" required />
+            </div>
+            <div>
+              <label for="lname">last name</label>
+              <input type="text" id="lname"/>
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" required placeholder="xyz@gmai.com"/>
+            </div>
+            <div>
+              <label for="phone">Phone number</label>
+              <input type="number" id="phone" maxlength="10"/>
+            </div>
+            <div>
+              <label for="pass">Password</label>
+              <input type="password" id="pass"/>
+            </div>
+            <div>
+              <label for="cpass">Confirm Password</label>
+              <input type="password" id="cpass"/>
             </div>
           </form>
         </div>
-        <div class="action">sas</div>
+        <div class="action">
+          <button class="btn">Create Account</button>
+          <div class="alreadyhaveaccount" style="color: black;">Already have an Account? <a href="Log-In">Log In</a></div>
+        </div>
       </div>
     </div>
   </body>

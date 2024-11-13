@@ -68,55 +68,62 @@ body {
   /* border: 1px solid magenta; */
 }
 .signup {
-  margin-left: 2.5rem;  
+  margin-left: 2.5rem;
   margin-right: 2.5rem;
   font-size: 1.25rem;
   /* border: 1px solid magenta; */
 }
 
 .right-second {
-  border: 1px solid magenta;
+ 
   flex: 2;
   color: black;
 }
-
-.form{
-  margin-left: 5rem;
+h2 {
+  text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+form > label{
+  margin-left: 50px;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  gap: 10px;
+  font-size: 1rem;
+}
 
 .action {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.btn {
+  height: 2.5rem;
+  width: 30%;
+  font-size: 1rem;
+}
+.alreadyhaveaccount{
+  font-size: 1rem;
+  width: 50%;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+input{
+  height: 25px;
 }
