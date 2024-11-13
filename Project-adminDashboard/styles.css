@@ -1,5 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{background: steelblue;}
+img{height: 40px;}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr;
+}
+.sidebar{
+    background-color:#38bdf8;
+
+}
+
+.dashboard{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 3px solid red; */
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    gap: 10px;
+    font-size: 1.75rem;
+}
+
+.sidebar-container{
+    display: grid;
+    row-gap: 20px;
+    font-size: 1.5rem;
+    grid-template-columns: 1fr 3fr;
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    
+}
