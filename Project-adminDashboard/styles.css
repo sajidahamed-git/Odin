@@ -55,7 +55,9 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 1rem;
-  padding: 10px 20px 0 0px;
+  /* padding: 10px 20px 0 0px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 1.5rem;
   /* border: 3px solid steelblue; */
 }
