@@ -135,52 +135,8 @@ function render(element) {
   const cardarea = document.querySelector(".cardarea");
   cardarea.append(element);
 }
-
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   const name = document.getElementById("bookname").value;
-//   const author = document.getElementById("authorname").value;
-//   const pagenos = document.getElementById("pagenos").value;
-//   //   console.log(bookname, authorname, pagenos);
-//   const book = {
-//     name,
-//     author,
-//     pagenos,
-//   };
-//   const newbookhtml = `<div class="bookcard">
-//         <h3>${book.name}</h3>
-//         <p>Author:${book.author}</p>
-//         <p>Pages: ${book.pagenos}</p>
-//             <div class="toggle-container">
-//                 <label for="toggle-read" class="toggle-btn">Mark as Read:</label>
-//                 <input type="checkbox" id="toggle-read" />
-//             </div>
-//     </div>`;
-
-//   const cardarea = document.querySelector(".cardarea");
-//   const html = cardarea.innerHTML;
-//   cardarea.innerHTML = html + newbookhtml;
-//   popup.close();
-//   form.reset()
-// });
-
-// function render(book){
-//   const lastbook = library[library.length -1]
-//   console.log(lastbook);
-//   console.log(book);
-//     const newbookhtml =
-//     `<div class="bookcard">
-//         <h3>${lastbook.name}</h3>
-//         <p>Author:${lastbook.author}</p>
-//         <p>Pages: ${lastbook.pagenos}</p>
-//             <div class="toggle-container">
-//                 <label for="toggle-read" class="toggle-btn">Mark as Read:</label>
-//                 <input type="checkbox" id="toggle-read" />
-//             </div>
-//     </div>`;
-//  document.querySelector('.cardarea').innerHTML += newbookhtml;
-
-//   popup.close()
-
-//   // console.log(array);
-// }
+const cardinit = document.querySelector('.cardarea')
+console.log(cardinit.innerHTML);
+if(cardinit.innerHTML === ''){
+  console.log('hello');
+}
