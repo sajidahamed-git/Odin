@@ -4,68 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="/script.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="libraryHeading">Library</div>
     <div class="main">
-      <div class="bookcard">
-        <h3>The Great Gatsby</h3>
-        <p>Author: F. Scott Fitzgerald</p>
-        <p>Pages: 180</p>
-        <div class="toggle-container">
-          <label for="toggle-read">Mark as Read:</label>
-          <input type="checkbox" id="toggle-read" />
+      <div class="libraryHeading">Library</div>
+      <div class="cardarea">
+        <div class="bookcard">
+          <h3>The Great Gatsby</h3>
+          <p>Author: F. Scott Fitzgerald</p>
+          <p>Pages: 180</p>
+          <div class="toggle-container">
+            <label for="toggle-read">Mark as Read:</label>
+            <input type="checkbox" id="toggle-read" />
+          </div>
         </div>
-      </div>
 
-      <div class="bookcard">
-        <h3>The Great Gatsby</h3>
-        <p>Author: F. Scott Fitzgerald</p>
-        <p>Pages: 180</p>
-        <div class="toggle-container">
-          <label for="toggle-read">Mark as Read:</label>
-          <input type="checkbox" id="toggle-read" />
-        </div>
-      </div>
-      <div class="bookcard">
-        <h3>The Great Gatsby</h3>
-        <p>Author: F. Scott Fitzgerald</p>
-        <p>Pages: 180</p>
-        <div class="toggle-container">
-          <label for="toggle-read">Mark as Read:</label>
-          <input type="checkbox" id="toggle-read" />
-        </div>
-      </div>
-      <div class="bookcard">
-        <h3>The Great Gatsby</h3>
-        <p>Author: F. Scott Fitzgerald</p>
-        <p>Pages: 180</p>
-        <div class="toggle-container">
-          <label for="toggle-read">Mark as Read:</label>
-          <input type="checkbox" id="toggle-read" />
-        </div>
-      </div>
-      <div class="bookcard">
-        <h3>The Great Gatsby</h3>
-        <p>Author: F. Scott Fitzgerald</p>
-        <p>Pages: 180</p>
-        <div class="toggle-container">
-          <label for="toggle-read">Mark as Read:</label>
-          <input type="checkbox" id="toggle-read" />
-        </div>
-      </div>
-      <div class="bookcard">
-        <h3>The Great Gatsby</h3>
-        <p>Author: F. Scott Fitzgerald</p>
-        <p>Pages: 180</p>
-        <div class="toggle-container">
-          <label for="toggle-read">Mark as Read:</label>
-          <input type="checkbox" id="toggle-read" />
-        </div>
-      </div>
 
-    <div class="addnew"><img src="assets/plus.png" alt="" /></div>
+
+      <div class="addbutton">
+        <button class="button">
+          <img class="image" src="assets/plus.png" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <dialog class="popup">
+      <form action="" class="form" name="bookform" method="">
+        <div class="inputdialog">
+          <label for="bookname">Book Name</label>
+          <input type="text" name="bookname" id="bookname" />
+          <label for="authorname">Author Name</label>
+          <input type="text" name="authorname" id="authorname" />
+          <label for="pagenos">No.of Pages</label>
+          <input type="number" name="pagenos" id="pagenos" />
+        </div>
+        <div><button class="submitbutton" type="submit">Add Book</button></div>
+        <div><button class="close">Close </button></div>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
   </body>
 </html>

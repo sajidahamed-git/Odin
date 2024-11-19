@@ -63,3 +63,6 @@ document.addEventListener('keydown', (event) => {
 
   else console.log(event);
 });
+const backspace = document.querySelector('.backspace')
+
+backspace.addEventListener('click',()=>console.log('hello'))

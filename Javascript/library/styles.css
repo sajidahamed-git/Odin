@@ -2,28 +2,30 @@
   margin: 0;
   padding: 0;
 }
-body {
+.main {
     box-sizing: border-box;
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .libraryHeading {
   width: 100%;
-  border: 1px solid grey;
+  
   text-align: center;
   font-size: 3rem;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
-.main {
+.cardarea {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fill,minmax(200px,auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: minmax(200px,auto); 
   gap: 16px;
   overflow-y: auto;
   text-align: center;
   padding: 16px;
+  align-self: flex-start;
 }
 .bookcard {
   border: 1px solid #ddd;
@@ -35,6 +37,8 @@ body {
   
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
   
   
@@ -43,15 +47,38 @@ body {
   margin: 0;
 }
 
-.addnew {
+.image{
+  height: 100px
+}
+
+.addbutton{
   position: fixed;
   bottom: 3%;
   right: 3%;
-
-    
+  
 }
-.addnew > img {
-  height: 5rem;
+.button{
+  border: none;
+  cursor: pointer;
 }
 
+/* centering the popup */
+  .popup {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
 
+    /* Centering styles */
+    position: fixed; /* Overrides the default dialog behavior */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .inputdialog{
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 300px;
+  }
