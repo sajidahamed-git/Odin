@@ -40,6 +40,7 @@ submitbutton.addEventListener("click", (event) => {
   }
   if (pagenos === '') {
     alert('Enter the no. of pages')
+    return;
   }
 
 
