@@ -74,7 +74,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 /* input popup dialog box stylin */
 .inputdialog {
   background-color: #f0f8ff;
@@ -104,20 +103,16 @@
 }
 
 .inputdialog input:focus {
-  border-color: #007BFF;
+  border-color: #007bff;
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }
-
-
-
-
 
 .inputbuttoncontainer {
   display: flex;
   justify-content: space-between;
   /* border: 1px solid salmon; */
   max-width: 400px;
-  margin: 20px  auto;
+  margin: 20px auto;
   margin-top: 20px;
   width: 100%;
 }
@@ -151,9 +146,8 @@
   background-color: #c82333;
 }
 
-
 /* add class to mark book as read */
-.bookreadcolor { 
+.bookreadcolor {
   background-color: lightgreen;
 }
 /* gap between check box and mark as read text */
